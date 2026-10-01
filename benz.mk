@@ -14,7 +14,7 @@ $(call inherit-product, device/oneplus/benz/device.mk)
 # Inherit some common PixelOS stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_benz
+PRODUCT_NAME := benz
 PRODUCT_DEVICE := benz
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -29,3 +29,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=CPH2613 \
     SystemDevice=OP5D3FL1 \
     SystemName=CPH2613
+
+# ASCP
+ASCP_MAINTAINER := rukia
+WITH_REVANCED := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true

@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/custom_benz.mk
+    $(LOCAL_DIR)/benz.mk
