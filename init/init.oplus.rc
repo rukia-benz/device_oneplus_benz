@@ -18,6 +18,22 @@ on boot
     # Display
     chmod 0000 /sys/kernel/oplus_display/hbm
 
+    # Battery / Bypass charging & Gentle charging
+    chown system system /sys/class/oplus_chg/battery/mmi_charging_enable
+    chmod 0660 /sys/class/oplus_chg/battery/mmi_charging_enable
+    chown system system /sys/class/oplus_chg/battery/slow_chg_en
+    chmod 0660 /sys/class/oplus_chg/battery/slow_chg_en
+
+    # Touchpanel
+    chown system system /proc/touchpanel/game_switch_enable
+    chown system system /proc/touchpanel/sensitive_level
+    chown system system /proc/touchpanel/smooth_level
+    chown system system /proc/touchpanel/glove_mode_enable
+    chmod 0660 /proc/touchpanel/game_switch_enable
+    chmod 0660 /proc/touchpanel/sensitive_level
+    chmod 0660 /proc/touchpanel/smooth_level
+    chmod 0660 /proc/touchpanel/glove_mode_enable
+
 on post-fs-data
     # ADSP ramdump
     mkdir /data/vendor/mmdump 0777 system system
