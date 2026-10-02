@@ -14,6 +14,20 @@ $(call inherit-product, device/oneplus/benz/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# AxionOS Flags
+AXION_MAINTAINER := rukia
+AXION_PROCESSOR := Snapdragon_7_Gen_3
+AXION_CAMERA_REAR_INFO := 50,8
+AXION_CAMERA_FRONT_INFO := 16
+
+TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+
+TARGET_NEEDS_VULKAN_MEDIA_FIX := true
+
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+
 PRODUCT_NAME := lineage_benz
 PRODUCT_DEVICE := benz
 PRODUCT_MANUFACTURER := OnePlus
