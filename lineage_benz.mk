@@ -12,7 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/benz/device.mk)
 
 # Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/custom/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# RisingOS
+RISING_MAINTAINER := rukia
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
 
 PRODUCT_NAME := lineage_benz
 PRODUCT_DEVICE := benz
@@ -28,4 +33,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=OP5D3FL1 \
     DeviceProduct=CPH2613 \
     SystemDevice=OP5D3FL1 \
-    SystemName=CPH2613
+    SystemName=CPH2613 \
+    RisingChipset=Snapdragon 7 Gen 3 \
+    RisingMaintainer=rukia
